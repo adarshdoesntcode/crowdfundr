@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/favicon.png" type="image/svg+xml" />
+
+  <link rel="stylesheet" href="/css/admin-login.css">
+    <link rel="stylesheet" href="/css/alert-message.css" />
+
+  <title>Crowdfundr. Admin</title>
+</head>
+<body>
+  <h1>CrowdFundr.</h1>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h2>Admin Login</h2>
+			</div>
+
+			<form class="login-form">
+				<div class="control-group">
+				<input type="email" class="login-field" placeholder="Email" id="login-name" required>
+				<label class="login-field-icon fui-user" for="login-name"></label>
+				</div>
+
+				<div class="control-group">
+				<input type="password" class="login-field" placeholder="Password" id="login-pass" required>
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+
+				<a class="btn btn-primary btn-large btn-block" type="submit">Login</a>
+				<!-- <a class="login-link" href="#">Lost your password?</a> -->
+			</form>
+		</div>
+	</div>
+    <div class="alert-box"></div>        
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="/js/alert.js"></script>
+		<script src="/js/admin-login.js"></script>
+</body>
+</html>

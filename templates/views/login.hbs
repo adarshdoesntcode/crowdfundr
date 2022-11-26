@@ -1,0 +1,98 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrowdFundr.</title>
+    <link rel="icon" href="/img/favicon.png" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/alert-message.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+
+
+  </head>
+  <body>
+
+    <div class="landing-page">
+      <div class="login-container">
+
+        {{! --------- NAV BAR Start-------------- }}
+      {{#if user}}
+      {{> protected-nav}}
+        
+        {{else}}
+        {{> public-nav}}
+      {{/if}}
+        {{!--------- NAV BAR End------------}}
+        <div class="login-banner">
+          <div class="login-info-illus">
+            <img src="/img/login.svg" />
+          </div>
+          <div class="login-input-section">
+            <div class="login-page">
+              <div class="form">
+                <form class="register-form">
+                  <input type="text" id="name" placeholder="name" required />
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="email address"
+                    required
+                  />
+                  <input
+                    type="password"
+                    id="password"
+                    placeholder="password"
+                    required
+                  />
+                  <input
+                    type="password"
+                    id="passwordConfirm"
+                    placeholder="confirm password"
+                    required
+                  />
+                  <button id="signup" type="submit">Sign Up</button>
+                  <p class="message">Already registered?
+                    {{!-- login Page --}}
+                    <a href="#"><span>Login</span></a></p>
+                </form>
+                <form class="login-form">
+                  <input
+                    type="email"
+                    class="email"
+                    placeholder="email address"
+                  />
+                  <input
+                    type="password"
+                    class="password"
+                    placeholder="password"
+                  />
+                  <button id="login" type="submit">Login</button>
+                  <p class="message">Not registered?
+                    <a href="#"><span>Create an account</span></a></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alert-box"></div>
+    {{>footer}}
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.js" integrity="sha512-xjzDqCmpabFznyCZ92vM1F0gg8ExgSukopZQOCcVbObLyJSmZAkaB9wzOCeSClearljJcjRh67cGDp2uv4diLg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    {{!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> --}}
+    <script src="/js/alert.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/nav.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  padding-right: 13%;
+  padding-left: 13%;
+  min-height: 70vh;
+}
+
+.landing-page {
+  position: relative;
+  background-image: linear-gradient(rgb(229, 238, 237) 12%, white);
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.menu-bar-icon{
+  width: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-bar-icon:hover{
+  transform: translate(-4px)
+}
+
+.login-nav {
+  padding: 10px 20px;
+  color: white;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+.menu-nav-container{
+  position: relative;
+}
+.dropdown-menu{
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: 150px;
+  border-radius: 12px;
+  padding: 10px 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+  /* display: none; */
+}
+
+.show{
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu img{
+  width: 18px;
+  height: 18px;
+}
+.dropdown-menu p{
+  padding: 0 20px;
+}
+.dropdown-menu .profile-menu{
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  padding: 15px 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 2px solid rgb(238, 238, 238);
+}
+.dropdown-menu .logout-menu{
+  padding: 15px 18px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #d50000;
+  cursor: pointer;
+  display: flex;
+  transition: background-color 0.3s ease;
+}
+
+.logout-menu:hover{
+  background-color: #ff0505;
+}
+
+.profile-menu:hover{
+  background-color: rgb(238, 238, 238)
+}
+.discover-nav {
+  padding: 10px 0px;
+  transition: all 0.3s ease 0s;
+}
+
+.discover-nav:hover {
+  transform: translateY(-3px);
+}
+
+.landing-page .header-area {
+  display: flex;
+  padding: 25px 0 0;
+  position: relative;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.801);
+}
+.landing-page .header-area .logo {
+  font-family: "Comfortaa", cursive;
+  font-size: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.logo:hover {
+  transform: translateY(-3px);
+}
+
+.logo::after {
+  content: " ";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url("/img/favicon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: -21px;
+  bottom: 17px;
+}
+span {
+  color: #35b729;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  flex-basis: 40%;
+  position: relative;
+  /* margin-left: ; */
+}
+
+.info::after {
+  content: "";
+  width: 10px;
+  height: 50%;
+  background-color: #35b729;
+  position: absolute;
+  left: -40px;
+  top: 8px;
+  border-radius: 4px;
+}
+
+.landing-page .info h1 {
+  letter-spacing: 0px;
+  font-size: 44px;
+  margin: 20px 0 20px;
+  line-height: 1.4;
+  color: black;
+}
+
+.landing-page .info p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.447);
+}
+
+.landing-page .info button {
+  border: 0;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  padding: 15px 33px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #fff;
+  /* background-color: rgb(114, 192, 96); */
+}
+
+.landing-page .image {
+  width: 60%;
+  position: relative;
+  padding-left: 40px;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  font-size: 16px;
+  background-color: #35b729;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: rgb(114, 192, 96);
+  box-shadow: 0px 15px 20px #72c06066;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.cards-carousel {
+  width: 100%;
+  padding-right: 10%;
+  padding-left: 10%;
+  margin-bottom: 80px;
+}
+
+.card-message {
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+  /* margin-bottom: 30px; */
+  font-size: 25px;
+}
+.cards-container {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: 570px;
+  position: relative;
+  padding: 20px 10px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  border-radius: 12px;
+  min-width: 370px;
+  max-width: 370px;
+  max-height: 530px;
+  min-height: 530px;
+  margin-left: 15px;
+  margin-right: 15px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all 0.3s ease 0s;
+  overflow: auto;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: rgba(149, 157, 165, 0.544) 0px 8px 24px;
+  cursor: pointer;
+}
+
+.card .card-image {
+  max-height: 255px;
+  border-bottom: solid 5px #35b729;
+}
+
+.card .card-image img {
+  border-radius: 12px 12px 0 0;
+
+  width: 100%;
+  max-height: 250px;
+  min-height: 250px;
+}
+.card .card-title {
+  padding: 15px;
+  color: rgba(0, 0, 0, 0.6);
+
+}
+
+.card .card-title-status {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #35b729;
+  font-weight: bold;
+}
+.card .card-title-title {
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
+  font-size: 20px;
+  color: black;
+  padding-top: 4px;
+  max-height: 27px;
+  overflow: hidden;
+}
+
+.card .card-description {
+  height: 15%;
+  padding: 0px 15px;
+  color: rgba(0, 0, 0, 0.6);
+  max-height: 95px;
+  overflow-y: hidden;
+}
+
+.card .progress {
+  padding:  0px 15px 15px 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.progress .progress-stats {
+  padding-top: 13px;
+  display: flex;
+  justify-content: space-between;
+  /* color: black; */
+}
+
+.progress-bar {
+  height: 8px;
+  background-image: linear-gradient(
+    to right,
+    rgb(205, 254, 221),
+    rgb(144, 202, 161)
+  );
+  border-radius: 3px;
+  margin: 6px 0;
+}
+
+.all-campaigns-container {
+  position: sticky;
+  height: 590px;
+  width: 100px;
+  /* top: -20px; */
+
+  right: -10px;
+  /* border-radius: 0 15px 15px 0; */
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) ,
+    rgb(255, 255, 255) 90%
+  );
+}
+
+.all-campaigns-container .all-campaigns {
+  color: white;
+  padding: 26px;
+  height: 70px;
+  width: 70px;
+  background-color: #35b729;
+  margin-top: 210px;
+  margin-left: 10px;
+  border-radius: 100%;
+  /* box-shadow: rgba(149, 157, 165, 0.707) 0px 8px 35px; */
+  transition: all 0.3s ease 0s;
+}
+
+.all-campaigns-container .all-campaigns:hover {
+  cursor: pointer;
+  transform: translate(-10px);
+  background-color: rgb(114, 192, 96);
+}
+
+.achievements-head {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 35px;
+}
+.achievements {
+  width: 100%;
+  padding-right: 13%;
+  padding-left: 13%;
+  display: flex;
+  justify-items: center;
+  margin-bottom: 50px;
+  justify-content: center;
+  background-image: url("https://assets-global.website-files.com/594d653c6e49186f94a0432e/5beb22c57ab270379ad179f0_1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.backed-projects,
+.money-raised,
+.people-contributed {
+  width: 300px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.achievement-deatils {
+  padding-top: 5px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.563);
+}
+.achievement-deatils .achievements-para {
+  padding: 10px 0;
+  font-size: 30px;
+  color: #35b729;
+}

@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  position: relative;
+    background-image: url("/img/login-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 1800px;
+
+  background-position: -80px 400px;
+}
+
+
+.hero-section {
+  position: relative;
+  padding-left: 13%;
+  padding-right: 13%;
+  background-image: linear-gradient(rgb(229, 238, 237) 10%, rgba(255, 255, 255, 0)90%);
+
+  /* background-image: url("/img/login-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-position: 89% 21%; */
+
+}
+
+.nav-container {
+  width: 100%;
+  
+}
+span {
+  color: #35b729;
+}
+.header-area {
+  display: flex;
+  padding: 25px 0 0;
+  position: relative;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.801);
+  
+}
+
+.hero-section .nav-container .logo {
+  font-family: "Comfortaa", cursive;
+  font-size: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.logo:hover {
+  transform: translateY(-3px);
+}
+.logo::after {
+  content: " ";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url("/img/favicon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: -21px;
+  bottom: 17px;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.menu-bar-icon {
+  width: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-bar-icon:hover {
+  transform: translate(-4px);
+}
+
+.login-nav {
+  padding: 10px 20px;
+  color: white;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+.menu-nav-container {
+  position: relative;
+}
+.dropdown-menu {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: 150px;
+  border-radius: 12px;
+  padding: 10px 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu img {
+  width: 18px;
+  height: 18px;
+}
+.dropdown-menu p {
+  padding: 0 20px;
+}
+.dropdown-menu .profile-menu {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  padding: 15px 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 2px solid rgb(238, 238, 238);
+}
+.dropdown-menu .logout-menu {
+  padding: 15px 18px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #d50000;
+  cursor: pointer;
+  display: flex;
+  transition: background-color 0.3s ease;
+}
+
+.logout-menu:hover {
+  background-color: #ff0505;
+}
+
+.profile-menu:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+.discover-nav {
+  padding: 10px 0px;
+  transition: all 0.3s ease 0s;
+}
+
+.discover-nav:hover {
+  transform: translateY(-3px);
+}
+
+.button {
+  font-size: 16px;
+  background-color: #35b729;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: rgb(114, 192, 96);
+  box-shadow: 0px 15px 20px #72c06066;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.campaign-hero-container {
+  /* box-shadow: rgba(149, 157, 165, 0.437) 0px 18px 34px; */
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 7%;
+  /* padding: 5% 0; */
+  display: flex;
+  /* align-items: center; */
+  border-radius: 12px;
+
+  /* height: 100% */
+}
+
+.campaign-hero-container .picture-section {
+  width: 60%;
+  height: 525px;
+  /* padding: 2%; */
+}
+
+.campaign-hero-container .picture-section img {
+  border-radius: 12px 0 0 12px;
+  width: 100%;
+  height: 93%;
+}
+
+.campaign-hero-container .picture-section p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.396);
+  /* height: 10%; */
+  margin-top: 6px;
+  /* border-top: 2px solid rgba(0, 0, 0, 0.6); */
+  /* border-bottom: 2px solid rgba(0, 0, 0, 0.6); */
+  padding: 0 5px;
+  position: relative;
+}
+
+.campaign-hero-container .description-section {
+  border-radius: 0 12px 12px 0;
+  padding: 2%;
+  width: 40%;
+  /* background-color: #fff; */
+  background-image: linear-gradient(rgb(255, 255, 255) 75%, rgba(255, 255, 255, 0) );
+
+}
+
+.FUNDING{
+  color: #35b729;
+}
+
+.COMPLETE{
+color: #007bff;
+}
+
+.ENDED{
+  color: #ff073a;;
+}
+
+.UNVERIFIED{
+  color: #6c757d;
+}
+
+.campaign-hero-container .organizer-details {
+  display: flex;
+
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.campaign-hero-container .organizer-details p {
+  position: relative;
+  margin-right: 30px;
+}
+
+.description-section .campaign-status p {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.description-section .campaign-title p {
+  margin-bottom: 4px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.description-section .campaign-address p {
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 12px;
+}
+
+.description-section .short-description p {
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 22px;
+}
+
+.created-on::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: -18px;
+  top: 35%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+}
+
+.fa-link{
+  padding: 5px;
+  font-size: 20px;
+  color: #414141;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fa-link:hover{
+  color: #35b729;
+  
+}
+
+.description-section .campaign-category p {
+  font-size: 18px;
+  color: #35b729;
+  margin-bottom: 20px;
+}
+
+.description-section .progress-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description-section .progress-data .raised-amount {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.description-section .progress-data .backers-number {
+  padding: auto 0;
+}
+
+.description-section .progress-bar {
+  border-radius: 6px;
+  width: 100%;
+  background-color: #72c06066;
+  margin-bottom: 8px;
+}
+
+.description-section .progress-goal {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.description-section .progress-bar .progress-done {
+  width: 0%;
+  height: 16px;
+  background-color: #35b729;
+  /* background-image: linear-gradient(
+    to right,
+    rgb(205, 254, 221),
+    rgb(144, 202, 161)
+  ); */
+  border-radius: 6px;
+  transition: width 1.2s ease-in-out;
+}
+
+.description-section .campaign-interaction-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description-section .campaign-interaction-div .button {
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  /* width: 30%; */
+}
+
+.donation-modal-container{
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, top 0.2s, visibility 0.2s,backdrop-filter 0.2s;
+  backdrop-filter: none;
+}
+
+.modal-conatainer-visible{
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  visibility: visible;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.donation-modal {
+  position: fixed;
+  width: 30%;
+  /* height: 45%; */
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.437) 0px 18px 34px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, top 0.2s, visibility 0.2s;
+  padding: 40px 50px;
+}
+
+.donation-visible {
+  z-index: 10000;
+
+  top: 50%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.donation-portal{
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+.donation-modal label{
+  padding: 5px;
+  font-size: 12px;
+  display: block;
+  /* padding: 5px 10px; */
+}
+.donation-modal input{
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.101);
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: 15px;
+  padding: 18px;
+  margin-bottom: 12px;
+
+}
+.donation-modal button{
+  position: relative;
+  margin:12px auto;
+  
+  display:block;
+  border-radius: 8px;
+  
+  /* margin-top: 20px; */
+}
+#payment-button {
+  padding: 15px;
+  color: #fff;
+  font-size: 18px;
+}
+
+ .button-loading::after {
+  content: " ";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-top: 3px solid white;
+  border-radius: 49%;
+  transition: all 0.3s;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+.second-container{
+
+  display: flex;
+  justify-content: space-between;
+  
+  /* margin-bottom: 200px; */
+}
+
+.tab-container{
+  
+  padding: 2%;
+  width: 78%;
+}
+
+
+
+
+.donation-card{
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.message-sec{
+  width: 80%;
+}
+
+.message-sec .name{
+  font-size: 20px;
+  /* font-weight: 600; */
+  padding-bottom: 3px;
+}
+
+.message-sec .donate-date{
+  font-size: 14px;
+  color: rgb(120, 120, 120);
+  padding-bottom: 8px;
+}
+
+.amount-sec{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.amount-sec p{
+  font-size: 25px;
+  font-weight: 900;
+  color: #35b729;
+}
+
+.top-donars-container{
+  text-align: center;
+  padding: 2%;
+  height: 40.75rem;
+  margin: 4.5rem 1.4rem 4.5rem 0;
+  overflow: scroll;
+  /* margin-left: 30px; */
+  border-radius: 12px;
+  width: 24%;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+
+}
+
+.top-donars-container .head{
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.top-donars-container  img{
+  width: 90px;
+  height: 90px;
+  margin-bottom: 15px;
+
+}
+
+.top-donars-container .top-amount{
+  font-size: 20px;
+  font-weight: 900;
+  color: #35b729;
+  margin-bottom: 30px;
+}

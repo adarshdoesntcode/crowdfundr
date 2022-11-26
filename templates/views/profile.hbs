@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+        <title>CrowdFundr.</title>
+    <link rel="icon" href="/img/favicon.png" type="image/svg+xml" />
+    <!-- Fontawesome CDN Link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/alert-message.css" />
+
+    <link rel="stylesheet" href="/css/profile.css">
+   </head>
+<body>
+    <div class="hero-section">
+      <div class="nav-container">
+        {{#if user}}
+          {{> protected-nav}}
+          {{else}}
+          {{> public-nav}}
+        {{/if}}
+        {{! ----------NAV BAR ENDS ------------  }}
+
+      </div>
+
+  <div class="container">
+    <div class="content">
+      <input type="radio" name="slider" {{profile}} id="home">
+      <input type="radio" name="slider" {{campaign}} id="blog">
+      <input type="radio" name="slider" {{donation}} id="help">
+      <div class="list">
+        <label for="home" class="home">
+        <i class="fas fa-user-circle"></i>
+        <span class="title">Profile</span>
+      </label>
+      <label for="blog" class="blog">
+        <span class="icon"><i class="fas fa-spa"></i></span>
+        <span class="title">Campaigns</span>
+      </label>
+      <label for="help" class="help">
+        <span class="icon"><i class="fas fa-hand-holding-usd"></i></span>
+        <span class="title">Donations</span>
+      </label>
+      <div class="slider"></div>
+    </div>
+      <div class="text-content">
+        <div class="home text">
+          <div class="title">My Profile 🙋‍♂️</div>
+          <div class="profile-content">
+            <p class="profile-name"><span>Name:</span>  <span class="name-span">-</span></p>
+            <p class="profile-email"><span>Email: </span><span class="email-span">-</span></p>
+            <p class="campaigns-hosted"><span>Campaigns hosted:</span> <span class="ch-span">0</span></p>
+            <p class="active-campaigns"><span>Active campaigns:</span> <span class="ac-span">0</span></p>
+            <p class="total-backers"><span>Total Backers: </span><span class="tb-span">0</span></p>
+            <p class="my-stats">My Stats 📈</p>
+            <p class="total-money-raised"><span> Total money raised:</span> <span class="tmr-span">रू. 0</span></p>
+            <p class="available-balance"><span>Available balance:</span> <span class="ab-span">रू. 0</span></p>
+            <p class="commission-amount"><span>Commission amount (20%):</span> <span class="ca-span">रू. 0</span></p>
+            <div class="withdrawn-so-far"><span>Withdrawn so far:</span> <span class="wof-span">रू. 0</span></div>
+          </div>
+        </div>
+        <div class="blog text">
+          <div class="title">My Campaigns 🚩</div>
+          <div class="my-campaigns-container">
+              {{!-- --------GENERATED DYNAMICALLY-------- --}}
+          </div>
+        </div>
+        <div class="help text">
+          <div class="title">My Donations 💰</div>
+          
+            <table>
+              <thead>
+                <tr>
+                  <th id="th-campaign">Campaign</th>
+                  <th id="th-date"> Date </th>
+                  <th id="th-amount"> Amount </th>
+                  <th id="th-status"> Status</th>
+                </tr>
+              </thead>
+              <tbody class="donation-table-body">
+
+              </tbody>
+            </table>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      <div class="donation-modal-container">
+      <div class="donation-modal">
+        <p class="donation-portal">Withdraw <span id="accent">Portal</span></p>
+        <p class="total-raised-amount"><span>Raised Amount:</span> <span id="green">रू. 0</span></p>
+        <p class="total-commission-amount"><span>Commission Amount:</span> <span id="red">रू. 0</span></p>
+        <p class="total-withdrawable-amount"><span>Withdrawable Amount:</span> <span id="blue">रू. 0</span></p>
+
+        <button id="payment-button" class="button"><p
+          id="withdraw-text">Withdraw</p>
+        </button>
+      </div>
+
+    </div>
+    <div class="alert-box"></div>
+    {{!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> --}}
+    {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.js" integrity="sha512-xjzDqCmpabFznyCZ92vM1F0gg8ExgSukopZQOCcVbObLyJSmZAkaB9wzOCeSClearljJcjRh67cGDp2uv4diLg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/js/alert.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/profile.js"></script>
+</body>
+</html>
+

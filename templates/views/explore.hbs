@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+        <title>CrowdFundr.</title>
+    <link rel="icon" href="/img/favicon.png" type="image/svg+xml" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    {{!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> --}}
+
+    <link rel="stylesheet" href="/css/explore.css">
+
+   </head>
+<body>
+    <div class="hero-section">
+      <div class="nav-container">
+        {{#if user}}
+          {{> protected-nav}}
+          {{else}}
+          {{> public-nav}}
+        {{/if}}
+        {{! ----------NAV BAR ENDS ------------  }}
+
+      </div>
+
+  <div class="container">
+    {{!-- <div class="topic">Explore</div> --}}
+    <div class="content">
+      <input type="radio" name="slider" {{popular}} id="home">
+      <input type="radio" name="slider" {{all}} id="blog">
+      <input type="radio" name="slider" id="help">
+      <div class="list">
+        <label for="home" class="home">
+        <i class="fas fa-fire-alt"></i>
+        <span class="title">Popular</span>
+      </label>
+      <label for="blog" class="blog">
+        <span class="icon"><i class="fas fa-border-all"></i></span>
+        <span class="title">All</span>
+      </label>
+      <label for="help" class="help">
+        <span class="icon"><i class="fas fa-search"></i></span>
+        <span class="title">Search</span>
+      </label>
+      <div class="slider"></div>
+    </div>
+      <div class="text-content">
+        <div class="home text">
+          <div class="title">Popular Campaigns 🔥</div>
+                  <div class="cards-container-popular">
+            {{!-- ----GENERATED DYNAMICALLY----- --}}
+          </div> </div>
+        <div class="blog text">
+          <div class="title">All Campaigns 📚</div>
+          <div class="cards-container-all">
+            {{!-- ----GENERATED DYNAMICALLY----- --}}
+          </div>         
+          {{!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias tempora, unde reprehenderit incidunt excepturi blanditiis ullam dignissimos provident quam? Fugit, enim! Architecto ad officiis dignissimos ex quae iusto amet pariatur, ea eius aut velit, tempora magnam hic autem maiores unde corrupti tenetur delectus! Voluptatum praesentium labore consectetur ea qui illum illo distinctio, sunt, ipsam rerum optio quibusdam cum a? Aut facilis non fuga molestiae voluptatem omnis reprehenderit, dignissimos commodi repellat sapiente natus ipsam, ipsa distinctio. Ducimus repudiandae fuga aliquid, numquam.</p> --}}
+        </div>
+        <div class="help text">
+          <form class="search-form"><input type="text" class="search-field" placeholder="Search"><i class="fas fa-search"></i></form>
+                    <div class="cards-container-search">
+            {{!-- ----GENERATED DYNAMICALLY----- --}}
+          </div> 
+          {{!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores error neque, officia excepturi dolores quis dolor, architecto iusto deleniti a soluta nostrum. Fuga reiciendis beatae, dicta voluptatem, vitae eligendi maxime accusamus. Amet totam aut odio velit cumque autem neque sequi provident mollitia, nisi sunt maiores facilis debitis in officiis asperiores saepe quo soluta laudantium ad non quisquam! Repellendus culpa necessitatibus aliquam quod mollitia perspiciatis ducimus doloribus perferendis autem, omnis, impedit, veniam qui dolorem? Ipsam nihil assumenda, sit ratione blanditiis eius aliquam libero iusto, dolorum aut perferendis modi laboriosam sint dolor.</p> --}}
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="alert-box"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {{!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --}}
+
+    {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.js" integrity="sha512-xjzDqCmpabFznyCZ92vM1F0gg8ExgSukopZQOCcVbObLyJSmZAkaB9wzOCeSClearljJcjRh67cGDp2uv4diLg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
+    {{!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> --}}
+    <script src="/js/alert.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/explore.js"></script>
+ {{!-- <script>
+  AOS.init({once: true,
+  offset: 0});
+</script> --}}
+</body>
+</html>
+
